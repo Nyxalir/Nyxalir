@@ -1,0 +1,197 @@
+:root {
+    /* Colors */
+    /* Text Color */
+    --text-color-dark: #fff;
+    --text-color-light: #000;
+    /* Background */
+    /* Tema Claro (Por defecto) */
+    --background-color-light: rgb(230, 230, 230);
+    --background-radiant-light: radial-gradient(circle at 10% 10%, rgb(201, 201, 201), rgb(230, 230, 230));
+    /* Tema Oscuro */
+    --background-color-dark: #000;
+    --background-radiant-dark: adial-gradient(circle at 10% 10%, rgb(20, 20, 20), rgb(10, 10, 10));
+    /* Borders */
+    /* Tema Claro (Por defecto) */
+    --border-color-light: #000;
+    --border-light: 1px solid var(--border-color-light);
+    /* Tema Oscuro */
+    --border-color-dark: #fff;
+    --boder-dark: 1px solid var(--border-color-dark);
+    /* Shadows */
+    --shadow-color-light: rgba(0, 0, 0, 0.5);
+    --shadow-color-dark: rgba(255, 255, 255, 0.5);
+    /* Hypervinculos */
+    --link-color-light-hover: #444444;
+    --link-color-dark-hover: #bbbbbb;
+    /* Text & Sizes */
+    --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    --size-xxs: 0.5rem; /* 8px */
+    --size-xs: 0.75rem; /* 12px */
+    --size-base: 1rem; /* 16px */
+    --size-md: 1.25rem; /* 20px */
+    --size-lg: 1.5rem; /* 24px */
+    --size-xl: 2rem; /* 32px */
+    --size-xxl: 2.5rem; /* 40px */
+    --size-xxxl: 3rem; /* 48px */
+    --size-xxxxl: 3.5rem; /* 56px */
+    --size-xxxxxl: 4rem; /* 64px */
+    --size-xxxxxxl: 4.5rem; /* 72px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--size-base);
+    color: var(--text-color-light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-light);
+    padding: 25px;
+    overflow: hidden;
+}
+
+/* Animaciones */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+    background: var(--background-radiant-light);
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    border: var(--border-light);
+    transition: background 0.1s ease-out;
+}
+
+/* Container menu */
+.container-menu {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    padding: var(--size-xl);
+}
+
+.titles {
+    margin-bottom: var(--size-xxxxl);
+}
+
+.titles h1 {
+    color: var(--text-color-light);
+    font-size: var(--size-xxxxxl);
+    font-weight: normal;
+}
+
+.titles h5 {
+    color: var(--text-color-light);
+    font-size: var(--size-md);
+    font-weight: normal;
+    margin-top: -5px;
+}
+
+/* Nav container */
+.nav {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin-bottom: var(--size-xxs);
+}
+
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color-light);
+    padding-left: 25px;
+    /* Espacio para el número */
+    font-size: var(--size-md);
+    /* Tamaño para "Home" */
+    transition: color 0.2s ease-in;
+}
+
+.number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    /* Tamaño más pequeño que el texto principal */
+    line-height: 1;
+}
+
+.nav-link:hover {
+    color: var(--link-color-light-hover);
+    text-decoration: none;
+}
+
+.nav a.active-tab::after {
+    content: " *";
+}
+
+.text {
+    display: inline-block;
+}
+
+/* Contenedor  */
+.container-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+/* Estilos d elos links */
+
+.link {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-size: var(--size-base);
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--link-color-light-hover);
+}
+
+/* @Copyright Nyxalir */
+#Nyxalir {
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    text-decoration: none;
+    color: var(--text-color-light);
+    transition: color 0.2s ease;
+}
+
+#Nyxalir:hover {
+    color: var(--link-color-light-hover);
+}
