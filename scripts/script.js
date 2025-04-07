@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             content.innerHTML = sections[sectionId];
 
             // Remueve la clase activa de cualquier <a> dentro del nav
-            document.querySelectorAll("nav a").forEach((link) => {
+            document.querySelectorAll("ul a").forEach((link) => {
                 link.classList.remove("active-tab");
             });
 
